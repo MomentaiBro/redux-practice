@@ -1,16 +1,19 @@
-import { useState } from 'react';
+import {useState} from 'react'
 import './App.css';
 
 
 function App() {
 
-  const [count, setCount] = useState(0);
+  const [counter, setCounter] = useState(0)
 
   return (
     <div className="App">
-      <h1>Hello! The number is {count} </h1>
-      <button onClick={() => setCount( count + 1)}> INCREASE THE NUMBER!!!</button>
-      <button onClick={() => setCount(count - 1)}> DECREASE THE NUMBER!!!</button>
+      <h1>The Count is set to</h1>
+      <h2>{counter}</h2>
+      <br/>
+      <button onClick={() => setCounter( counter + 1)}> Increase the Count! </button>
+      <button onClick={() => setCounter( counter - 1)}> Decrease the Count! </button>
+
     </div>
   );
 }
